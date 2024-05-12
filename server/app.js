@@ -1,7 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-
+import cors from 'cors';
 
 // Import routes
 import postRouter from './route/PostRouter.js'
@@ -17,7 +17,9 @@ mongoose.connect(process.env.MONGO_URI)
 
 // Middlewares
 app.use(express.json());
-// app.use(cors());
+app.use(cors({
+    origin: 'http://127.0.0.1:5500'
+}));
 
 // routes
 app.use('/posts', postRouter);

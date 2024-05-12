@@ -1,4 +1,4 @@
-import Post from "../model/Post";
+import Post from "../model/Post.js";
 
 const DEFAULT_PAGE_VALUE = 1;
 const DEFAULT_LIMIT_VALUE = 10;
